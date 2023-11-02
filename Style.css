@@ -1,0 +1,192 @@
+/*
+  Hacer el Reset
+*/
+
+.nav_bar{
+  
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.bg-dark {
+  background-color: #64c586 !important;
+}
+.logo {
+  width: 12rem;
+  height: 5rem;
+  margin-left: 3rem;
+  border-radius: 10%;
+  box-shadow: 0 0.2rem 1rem #f6d167;
+
+}
+
+#site-search{
+  background-color: white;
+  border-color: white;  
+}
+.btn{
+  background-color: #f6d167;
+  border-color: white;
+  color: black;
+}
+.ul_nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  list-style: none;
+}
+
+.ul_nav li {
+  margin: 15px;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#modal {
+  display: none;
+  width: 40rem;
+  height: 40rem;
+  padding: 3rem;
+  position: absolute;
+  color: white;
+  background-color: #64c586;
+  border-radius: 5%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  justify-items: center;
+  align-items: center;
+  margin: 12rem 40rem;
+  overflow: hidden;
+}
+
+input,
+textarea {
+  background: white;
+  border: solid 1px rgb(113, 112, 112);
+  padding: 5px;
+  width: 300px;
+}
+
+textarea {
+  height: 8rem;
+}
+
+.enviar,
+.cerrar {
+  display: inline;
+  color: white;
+  background-color: #f6d167;
+  border: solid 1px rgb(113, 112, 112);
+  border-radius: 3rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 5rem !important;
+  margin: 3rem 5rem !important;
+}
+
+.intro_cards{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 5rem 15rem 5rem 15rem;
+  
+}
+.card{
+  display: flex;
+  flex-direction: column;  
+  width: 18rem;  
+  height: 30rem;
+  box-shadow: 0 4px 16px #64c586;
+}
+.card img{
+  width:auto;
+  height: 15rem;
+}
+
+
+
+.btn .btn-primary{
+  background-color: #f6d167;
+  border-color: yellowgreen;
+  margin-top: 5rem;
+}
+.btn-primary:hover{
+  color: white;
+  background-color: #64c586;
+    text-shadow: 0 2px 15px #f6d167;
+    transition: 0.5s;
+}
+h3{
+  text-align: center;
+}
+.top_title {
+  margin-top:2rem;
+}
+.empresas_confian{
+  display: flex; 
+  width:10rem;
+  height: 10rem;
+  margin: 5rem 15rem;
+  text-align: center;
+}
+.empresas_confian img{
+  width: 12rem;
+  height: 10rem;
+  margin: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.nosotros{
+  background-color:#64c586 ;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-evenly; 
+    height: 20rem;
+}
+
+.nosotros h3{
+  border: 2rem;
+  border-color: black;
+}
+.descripcion_nosotros{
+  width: 60%;  
+}
+
+.redes_y_acciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:#64c586;
+  color:black;   
+  height: 15rem;
+}
+.ul_redes{
+  display: flex; 
+  list-style:none ;
+  margin-top: 5rem;
+}
+.ul_redes i{
+  color:black;
+  margin: 0 2rem 0 2rem;
+}
+
+footer {
+  color: white;
+  background-color: #f6d167;
+  text-align: center;
+  padding: 0.8rem;
+}
+
+footer:hover {
+  color: black;
+  text-shadow: 0 2px 15px rgb(246, 249, 250);
+  transition: 0.5s;
+}

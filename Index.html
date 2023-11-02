@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es-ar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/Style.css" type="text/css">
+
+  <title>Trabajo Práctivo Integrador - NEORIS</title>
+
+</head>
+
+<body>
+  <section class="nav_bar">
+
+    <nav class="navbar bg-dark" data-bs-theme="dark">
+      <img class="logo" src="Assets/Logo_amarillo.png" alt="Logo de la pagina">
+      <ul class="ul_nav">
+
+        <li>
+          <a href="#nosotros">Nosotros</a>
+        </li>
+        <li>
+          <a href="#contacto">Contacto</a>
+        </li>
+        <li>
+          <label class="buscar" for="search"></label>
+          <input type="search" id="site-search" name="q" placeholder="Buscar" />
+
+          <button class="btn">Ir</button>
+        </li>
+      </ul>
+    </nav>
+  </section>
+
+
+  <div id="modal" class="modal colaborar-modal">
+    <p>Dejanos tus datos. Nos pondremos en contacto para comentarte las opciones que tenemos para colaborar.
+      Si en 24 hs no recibís respuesta, corroborá que nuestro mail no este en el area de "correo no deseado". Gracias!
+    </p>
+  
+    <form class="colaborar-form">
+      <div class="row">
+        <label for="firstname">Nombre:</label><input type="text" id="firstname">
+      </div>
+      <div class="row">
+        <label for="lastname">Apellido:</label><input type="text" id="lastname">
+      </div>
+      <div class="row">
+        <label for="email">E-mail:</label><input type="e-mail" id="email">
+      </div>
+      <div class="row">
+        <label for="msg-text">Comentarios:</label>
+        <textarea id="msg-text"></textarea>
+      </div>
+      <div class="row">
+        <button class="enviar" type="submit">Enviar</button>
+        <button class="cerrar" type="button" onclick="cerrarModal()">X</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="modal" class="modal adoptar-modal">
+    <p>¿Te gustaron mis trabajos? No dudes en contactarme para darle vida a tus ideas.</p>
+  
+    <form class="adoptar-form">
+      <div class="row">
+        <label for="firstname">Nombre:</label><input type="text" id="firstname">
+      </div>
+      <div class="row">
+        <label for="lastname">Apellido:</label><input type="text" id="lastname">
+      </div>
+      <div class="row">
+        <label for="email">E-mail:</label><input type="e-mail" id="email">
+      </div>
+      <div class="row">
+        <label for="msg-text">Comentarios:</label>
+        <textarea id="msg-text"></textarea>
+      </div>
+      <div class="row">
+        <button class="enviar" type="submit">Enviar</button>
+        <button class="cerrar" type="button" onclick="cerrarModal()">X</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="modal" class="modal amadrinar-modal">
+    <p>¿Te gustaron mis trabajos? No dudes en contactarme para darle vida a tus ideas.</p>
+  
+    <form class="amadrinar-form">
+      <div class="row">
+        <label for="firstname">Nombre:</label><input type="text" id="firstname">
+      </div>
+      <div class="row">
+        <label for="lastname">Apellido:</label><input type="text" id="lastname">
+      </div>
+      <div class="row">
+        <label for="email">E-mail:</label><input type="e-mail" id="email">
+      </div>
+      <div class="row">
+        <label for="msg-text">Comentarios:</label>
+        <textarea id="msg-text"></textarea>
+      </div>
+      <div class="row">
+        <button class="enviar" type="submit">Enviar</button>
+        <button class="cerrar" type="button" onclick="cerrarModal()">X</button>
+      </div>
+    </form>
+  </div>
+
+
+
+
+  <section class="intro_cards">
+    <div class="card">
+      <img src="Assets/pexels-cong-h-1404827.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Tu aporte nos ayuda</h5>
+        <p class="card-text">Donando una pequeña suma de dineros nos ayudas a afrontar los gastos de: Alimentos,
+          medicaciones, atencion veterinaria, arreglo de locasiones, et...
+        </p>
+        <a id="colaborar_form" href="#" class="btn btn-primary">Colaborar</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Assets/pexels-valeriia-harbuz-12947931.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Muchos esperan...</h5>
+        <p class="card-text">Son muchos los perros y gatos que espaeran ser adoptados para formar parte de una familia y
+          sentir ese amor con el que tanto sueñan. Animate!
+        </p>
+        <a id="adoptar_form" href="#" class="btn btn-primary">Adoptar</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/Assets/pexels-chevanon-photography-1108099.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Acercate</h5>
+        <p class="card-text">Podes ser Madrina/Padrino de uno de nuestros rescatados y asi brindarle todos los cuidados
+          que necesita. Esta opcion es ideal si no hay posibilidades de ser adoptante.
+        </p>
+        <a id="amadrinar_form" href="#" class="btn btn-primary">Amadrinar</a>
+      </div>
+    </div>
+  </section>
+  
+  <section class="nosotros" id="nosotros">
+    <h3>Nosotros</h3>
+    <p class="descripcion_nosotros">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor,
+      nec dignissim metus. Donec augue elit,
+      rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
+      Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec
+      laoreet rutrum libero sed pharetra. Duis a arcu convallis, gravida purus eget, mollis diam.</p>
+
+  </section>
+
+
+  
+  <h3 class="top_title">Estas Empresas confian en nosotros y aportan para el vienestar animal</h3>
+  <section class="empresas_confian">
+
+    <a href="https://www.zarla.com/es/gu%C3%ADas/logos-de-alimento-para-mascotas" target="_blank"><img
+        src="/Assets/alimento1-removebg-preview.png" alt="..."></a>
+    <a href="https://www.metrive.com.ar/" target="_blank"> <img src="/Assets/alimento2-removebg-preview.png"
+        alt="..."></a>
+    <a href="https://www.metrive.com.ar/" target="_blank"><img src="/Assets/alimento3-removebg-preview.png"
+        alt="..."></a>
+    <a href="https://www.veguis.com/" target="_blank"><img src="/Assets/alimento4-removebg-preview.png" alt="..."></a>
+
+  </section>
+  
+
+  <section class="redes_y_acciones" id="contacto">
+    <h3 class="top_title">Contactanos</h3>
+    <ul class="ul_redes">
+      <li><a href="https://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a></li>
+      <li><a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a></li>
+      <li><a href="https://twitter.com" target="_blank"><i class="bi bi-twitter-x"></i></a></li>
+      <li><a href="https://whatsapp.com" target="_blank"><i class="bi bi-whatsapp"></i></a></li>
+      <li><a href="https://telegram.org" target="_blank"><i class="bi bi-telegram"></i></a></li>
+    </ul>
+  </section>
+
+  <section class="footer">
+  </section>
+
+  <footer>
+    <span>Copyright&#169; by Majo, Cherry & Angie para NEORIS Noviembre 2023.</span>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="./Script.js"></script>
+</body>
+
+</html>
