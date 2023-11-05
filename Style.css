@@ -1,39 +1,65 @@
 /*
-  Hacer el Reset
-*/
-
-.nav_bar{
+  Hacer el Reset?
   
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
+  */
+
+* {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Prompt', sans-serif;
 }
-.bg-dark {
+
+.logo img {
+  position: absolute;
+  width: 20rem;
+  margin: 1rem;
+  border-radius: 30% 30% 50% 70%;
+  transition: transform 0.4s;
+}
+
+.logo img:hover {
+  transform: rotate(-8deg);
+}
+
+.nav_bar .bg-dark {
+  width: 100%;
   background-color: #64c586 !important;
 }
-.logo {
-  width: 12rem;
-  height: 5rem;
-  margin-left: 3rem;
-  border-radius: 10%;
-  box-shadow: 0 0.2rem 1rem #f6d167;
 
+.nav_bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 2rem;
+  width: 100%;
+  background-color: #64c586;
 }
 
-#site-search{
+.buscar {
+  display: flex;
+  align-items: center;
+}
+
+#site-search {
   background-color: white;
-  border-color: white;  
+  border-color: white;
+  border-radius: 25px;
 }
-.btn{
+
+.btn {
   background-color: #f6d167;
   border-color: white;
   color: black;
+  margin-left: 1rem;
 }
+
 .ul_nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 40rem;
+  margin-left: 30rem;
   color: white;
   list-style: none;
 }
@@ -48,13 +74,21 @@ a {
   color: black;
 }
 
-#modal {
+a:hover {
+  color: #f6d167;
+  /*text-shadow: 0 2px 5px rgb(246, 249, 250);*/
+  transition: 0.5s;
+}
+
+#modal_1,
+#modal_2,
+#modal_3 {
   display: none;
   width: 40rem;
   height: 40rem;
   padding: 3rem;
   position: absolute;
-  color: white;
+  color: black;
   background-color: #64c586;
   border-radius: 5%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -78,104 +112,178 @@ textarea {
 
 .enviar,
 .cerrar {
-  display: inline;
   color: white;
   background-color: #f6d167;
   border: solid 1px rgb(113, 112, 112);
-  border-radius: 3rem;
+  border-radius: 50px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  width: 5rem !important;
-  margin: 3rem 5rem !important;
+  width: 7rem !important;
+  margin: 3rem 5rem;
 }
 
-.intro_cards{
+
+
+.intro_cards {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   margin: 5rem 15rem 5rem 15rem;
-  
+
 }
-.card{
+
+.card {
   display: flex;
-  flex-direction: column;  
-  width: 18rem;  
+  flex-direction: column;
+  width: 18rem;
   height: 30rem;
   box-shadow: 0 4px 16px #64c586;
 }
-.card img{
-  width:auto;
+
+.card img {
+  width: auto;
   height: 15rem;
 }
 
+.card {
+  transition: transform 0.2s;
+  /* Agregar una transición suave para el efecto de escala */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  /* Escalar la tarjeta al 105% de su tamaño original en el hover */
+}
+
+.carousel-item img {
+  /*max-height: 350px;*/
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background-color: rgba(red, green, #FFD166, alpha);
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.carousel.caption h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0d6824;
+  margin-bottom: 10px;
+}
+
+.carousel-caption p {
+  font-size: 18px;
+  color: #18a82b;
+}
 
 
-.btn .btn-primary{
+.btn .btn-primary {
   background-color: #f6d167;
   border-color: yellowgreen;
   margin-top: 5rem;
+
+
 }
-.btn-primary:hover{
+
+.btn-primary:hover {
   color: white;
+  background-color: #64c586 !important;
+  text-shadow: 0 2px 15px #f6d167;
+  transition: 0.5s;
+  border: none;
+}
+
+.nosotros {
   background-color: #64c586;
-    text-shadow: 0 2px 15px #f6d167;
-    transition: 0.5s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 20rem;
 }
-h3{
+
+.nosotros h3 {
+  border: 2rem;
+  border-color: black;
+}
+
+.descripcion_nosotros {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 1.8rem;
+  width: 60%;
+}
+
+.nosotros_img {
+  width: 20rem;
+  box-shadow: 0 4px 16px #f6d167;
+}
+
+.nosotros h3 {
+  z-index: 1;
+  position: absolute;
+  color: white;
+  margin: 3rem 2rem 7rem 8rem;
+}
+
+h3 {
+  font-size: 2.5rem;
   text-align: center;
 }
+
 .top_title {
-  margin-top:2rem;
+  margin-top: 2rem;
 }
-.empresas_confian{
-  display: flex; 
-  width:10rem;
-  height: 10rem;
-  margin: 5rem 15rem;
+
+.empresas_confian {
+  display: flex;
+  width: 100%;
+  height: 20rem;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
   text-align: center;
 }
-.empresas_confian img{
+
+.empresas_confian img {
   width: 12rem;
   height: 10rem;
-  margin: 2rem;
+  margin: 5rem;
   align-items: center;
   justify-content: center;
 }
 
-.nosotros{
-  background-color:#64c586 ;
-  
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content:space-evenly; 
-    height: 20rem;
-}
 
-.nosotros h3{
-  border: 2rem;
-  border-color: black;
-}
-.descripcion_nosotros{
-  width: 60%;  
-}
 
 .redes_y_acciones {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color:#64c586;
-  color:black;   
+  background-color: #64c586;
+  color: black;
   height: 15rem;
 }
-.ul_redes{
-  display: flex; 
-  list-style:none ;
+
+.ul_redes {
+  display: flex;
+  list-style: none;
   margin-top: 5rem;
 }
-.ul_redes i{
-  color:black;
+
+.ul_redes i {
+  color: black;
   margin: 0 2rem 0 2rem;
+}
+
+i:hover {
+  color: #f6d167;
+  transition: 0.2s;
 }
 
 footer {
@@ -183,10 +291,62 @@ footer {
   background-color: #f6d167;
   text-align: center;
   padding: 0.8rem;
+  width: 100%;
 }
 
 footer:hover {
   color: black;
   text-shadow: 0 2px 15px rgb(246, 249, 250);
   transition: 0.5s;
+}
+
+
+@media (max-width:400px) {
+ .logo{
+  width: 5px;
+ }
+
+
+ .ul_nav{
+  display:none;
+ }
+main {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+.intro_cards{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card{
+  margin: 4%;
+}
+
+.nosotros{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.empresas_confian{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ .redes_y_acciones{
+  display: flex;
+  flex-direction: column;
+ }
+}
+
+@media (min-width:400px) and (max-width:800px){
+
+}
+
+@media (min-width:800px){
+  
 }
