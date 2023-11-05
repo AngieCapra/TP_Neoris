@@ -76,7 +76,7 @@ a {
 
 a:hover {
   color: #f6d167;
-  /*text-shadow: 0 2px 5px rgb(246, 249, 250);*/
+
   transition: 0.5s;
 }
 
@@ -121,7 +121,12 @@ textarea {
   margin: 3rem 5rem;
 }
 
-
+.descripcion {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
 
 .intro_cards {
   display: flex;
@@ -206,10 +211,11 @@ textarea {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  height: 20rem;
+  height: 28rem;
 }
 
 .nosotros h3 {
+  text-align: center;
   border: 2rem;
   border-color: black;
 }
@@ -222,15 +228,57 @@ textarea {
 
 .nosotros_img {
   width: 20rem;
+  height: 20rem;
   box-shadow: 0 4px 16px #f6d167;
 }
 
-.nosotros h3 {
-  z-index: 1;
-  position: absolute;
-  color: white;
-  margin: 3rem 2rem 7rem 8rem;
+.flip_card {
+  position: relative;
+
+  width: 20rem;
+  height: 20rem;
+
+  float: left;
+  perspective: 500px;
 }
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.flip_card:hover .content {
+  transform: rotateY(180deg);
+  transition: transform 0.8s;
+}
+
+.front,
+.back {
+  position: absolute;
+  height: 20rem;
+  width: 20rem;
+
+
+
+
+  backface-visibility: hidden;
+}
+
+.back img {
+  width: 20rem;
+  height: 20rem;
+}
+
+.back {
+
+  transform: rotateY(180deg);
+}
+
 
 h3 {
   font-size: 2.5rem;
@@ -302,51 +350,50 @@ footer:hover {
 
 
 @media (max-width:400px) {
- .logo{
-  width: 5px;
- }
+  .logo {
+    width: 5px;
+  }
 
 
- .ul_nav{
-  display:none;
- }
-main {
-  display: flex;
-  flex-direction: column;
-  align-items:center;
-}
-.intro_cards{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  .ul_nav {
+    display: none;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro_cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    margin: 4%;
+  }
+
+  .nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .empresas_confian {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .redes_y_acciones {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-.card{
-  margin: 4%;
-}
+@media (min-width:400px) and (max-width:800px) {}
 
-.nosotros{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.empresas_confian{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
- .redes_y_acciones{
-  display: flex;
-  flex-direction: column;
- }
-}
-
-@media (min-width:400px) and (max-width:800px){
-
-}
-
-@media (min-width:800px){
-  
-}
+@media (min-width:800px) {}
