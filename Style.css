@@ -1,12 +1,13 @@
-/*
-  Hacer el Reset?
-  
-  */
-
 * {
   font-family: 'Barlow Condensed', sans-serif;
   font-family: 'Prompt', sans-serif;
+  box-sizing: content-box;
 }
+
+body {
+  background-color: #f5f5fa;
+}
+
 
 .logo img {
   position: absolute;
@@ -88,16 +89,31 @@ a:hover {
   transition: 0.5s;
 }
 
+.blur_fondo {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 998;
+}
+
+
 #modal_1,
 #modal_2,
 #modal_3 {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   width: 40rem;
-  height: 40rem;
+  height: 33rem;
   padding: 3rem;
   position: absolute;
   color: black;
-  background-color: #64c586;
+  background-color: #828687;
   border-radius: 5%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   justify-items: center;
@@ -109,9 +125,11 @@ a:hover {
 input,
 textarea {
   background: white;
-  border: solid 1px rgb(113, 112, 112);
+  border: none;
+  box-shadow: 0 4px 10px rgba(31, 28, 28, 0.2);
   padding: 5px;
   width: 300px;
+
 }
 
 textarea {
@@ -121,13 +139,15 @@ textarea {
 .enviar,
 .cerrar {
   color: white;
-  background-color: #f6d167;
+  background-color: #64c586;
   border: solid 1px rgb(113, 112, 112);
   border-radius: 50px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 7rem !important;
   margin: 3rem 5rem;
 }
+
+
 
 .descripcion {
   display: block;
@@ -160,16 +180,15 @@ textarea {
 
 .card {
   transition: transform 0.2s;
-  /* Agregar una transición suave para el efecto de escala */
+
 }
 
 .card:hover {
   transform: scale(1.05);
-  /* Escalar la tarjeta al 105% de su tamaño original en el hover */
+
 }
 
 .carousel-item img {
-  /*max-height: 350px;*/
   object-fit: cover;
 }
 
@@ -254,8 +273,6 @@ textarea {
   position: absolute;
   width: 100%;
   height: 100%;
-
-
   transition: transform 1s;
   transform-style: preserve-3d;
 }
@@ -270,10 +287,6 @@ textarea {
   position: absolute;
   height: 20rem;
   width: 20rem;
-
-
-
-
   backface-visibility: hidden;
 }
 
@@ -283,7 +296,6 @@ textarea {
 }
 
 .back {
-
   transform: rotateY(180deg);
 }
 
@@ -319,8 +331,8 @@ h3 {
 
 .empresas_confian img:hover {
   transform: scale(1.05);
-
 }
+
 
 
 .redes_y_acciones {
@@ -343,29 +355,93 @@ h3 {
   margin: 0 2rem 0 2rem;
 }
 
+i {
+  font-size: 2rem;
+}
+
 i:hover {
   color: #f6d167;
   transition: 0.2s;
 }
 
-footer {
-  color: white;
-  background-color: #f6d167;
-  text-align: center;
-  padding: 0.8rem;
-  width: 100%;
+.class__container {
+  display: grid;
+  grid-template-columns: repeat(2 1fr);
+  gap: 2rem;
 }
 
-footer:hover {
-  color: black;
-  text-shadow: 0 2px 15px rgb(246, 249, 250);
-  transition: 0.5s;
+.footer__container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 400px repeat(3, 1fr);
+  gap: 2rem;
 }
 
+.footer__blur {
+  bottom: 0;
+  right: 0;
+}
+
+.footer__logo {
+  max-width: 150px;
+  margin-bottom: 2rem;
+}
+
+.footer__col p {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer__socials a {
+  padding: 5px 10px;
+  font-size: 1.25rem;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: 100%;
+  transition: 0, 3s;
+}
+
+
+
+.footer__col h4 {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--primary_color);
+
+}
+
+.footer__col>a {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--primary_color);
+  transition: 0.3s;
+
+}
+
+
+.footer {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: var(--white);
+}
+
+
+
+/* MEDIA QUERIES*/
 
 @media (max-width:400px) {
-  .logo {
-    width: 5px;
+  .logo img {
+    width: 30%;
+    height: 6%;
   }
 
 
@@ -394,20 +470,57 @@ footer:hover {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    height: fit-content;
+  }
+
+  h3 {
+    width: 90%;
   }
 
   .empresas_confian {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: fit-content;
+
   }
 
   .redes_y_acciones {
     display: flex;
-    flex-direction: column;
   }
+
+  .redes_y_acciones ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 5%;
+  }
+
+  .redes_y_acciones li {
+    margin-top: 10%;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    margin: 5%;
+    justify-content: space-around;
+  }
+
+  .col-3 {
+    margin: 3%;
+    align-self: center;
+  }
+
+  #modal_1,
+  #modal_2,
+  #modal_3 {
+    width: 40px;
+    height: min-content;
+  }
+
+  @media (min-width:400px) and (max-width:800px) {}
+
+  @media (min-width:800px) {}
+
 }
-
-@media (min-width:400px) and (max-width:800px) {}
-
-@media (min-width:800px) {}

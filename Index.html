@@ -33,7 +33,7 @@
             <a href="#nosotros">Nosotros</a>
           </li>
           <li>
-            <a href="#contacto">Contacto</a>
+            <a href="#contacto">Contactanos</a>
           </li>
           <li>
             <label class="buscar" for="search"></label>
@@ -55,13 +55,13 @@
 
       <form class="colaborar-form">
         <div class="row">
-          <label for="firstname">Nombre:</label><input type="text" id="firstname">
+          <label for="firstname">Nombre:</label><input type="text" id="firstname" required>
         </div>
         <div class="row">
-          <label for="lastname">Apellido:</label><input type="text" id="lastname">
+          <label for="lastname">Apellido:</label><input type="text" id="lastname" required>
         </div>
         <div class="row">
-          <label for="email">E-mail:</label><input type="e-mail" id="email">
+          <label for="email">E-mail:</label><input type="e-mail" id="email" required>
         </div>
         <div class="row">
           <label for="msg-text">Comentarios:</label>
@@ -81,23 +81,23 @@
 
       <form class="adoptar-form">
         <div class="row">
-          <label for="firstname">Nombre:</label><input type="text" id="firstname">
+          <label for="firstname">Nombre:</label><input type="text" id="firstname" required>
         </div>
         <div class="row">
-          <label for="lastname">Apellido:</label><input type="text" id="lastname">
+          <label for="lastname">Apellido:</label><input type="text" id="lastname" required>
         </div>
         <div class="row">
-          <label for="email">WhatsApp</label><input type="number" id="whatsApp">
+          <label for="email">WhatsApp</label><input type="number" id="whatsApp" required>
         </div>
         <div class="row">
           <label for="msg-text">Comentarios:</label>
           <textarea id="msg-text"></textarea>
         </div>
         <div class="row">
-       
+
           <button class="enviar" type="submit">Enviar</button>
           <button class="cerrar" type="button" onclick="cerrarModal_2()">X</button>
-          
+
         </div>
       </form>
     </div>
@@ -110,13 +110,13 @@
 
       <form class="amadrinar-form">
         <div class="row">
-          <label for="firstname">Nombre:</label><input type="text" id="firstname">
+          <label for="firstname">Nombre:</label><input type="text" id="firstname" required>
         </div>
         <div class="row">
-          <label for="lastname">Apellido:</label><input type="text" id="lastname">
+          <label for="lastname">Apellido:</label><input type="text" id="lastname" required>
         </div>
         <div class="row">
-          <label for="email">E-mail:</label><input type="e-mail" id="email">
+          <label for="email">E-mail:</label><input type="e-mail" id="email" required>
         </div>
         <div class="row">
           <label for="msg-text">Comentarios:</label>
@@ -129,10 +129,13 @@
       </form>
     </div>
 
-<div class="descripcion">
-  <p>Somos una ONG ecargada de rescatar y dar cobijo a animales en situacion de calle,<br> con la intención de recuperarlos y que encuentren un hogar.<br>¡Para ello necestitamos de tu ayuda! ¿Te sumás?<br>
-     ¡Dale!</p>
-</div>
+    <div id="fondo_modal" class="blur_fondo"></div>
+
+    <div class="descripcion">
+      <p>Somos una ONG ecargada de rescatar y dar cobijo a animales en situacion de calle,<br> con la intención de
+        recuperarlos y que encuentren un hogar.<br>¡Para ello necestitamos de tu ayuda! ¿Te sumás?<br>
+        ¡Dale!</p>
+    </div>
 
 
     <section class="intro_cards">
@@ -173,7 +176,7 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-        <!--<img src="Assets/pexels-valeriia-harbuz-12947931.jpg" class="card-img-top" alt="...">-->
+
         <div class="card-body">
           <h5 class="card-title">Muchos esperan...</h5>
           <p class="card-text">Son muchos los perros y gatos que esperan ser adoptados para formar parte de una
@@ -208,7 +211,7 @@
         <div class="flip_card">
           <div class="content">
             <div class="front">
-            <img class="nosotros_img" src="/Assets/nosotros.jpg" alt="nosotros en el bosque">
+              <img class="nosotros_img" src="/Assets/nosotros.jpg" alt="nosotros en el bosque">
             </div>
             <div class="back">
               <img src="/Assets/Carlos_y_Ana.jpg" alt="Carlos y Ana">
@@ -216,12 +219,16 @@
           </div>
         </div>
 
-        
 
-        
+
+
       </div>
       </div>
-      <p class="descripcion_nosotros">Somos Ana y Carlos, estamos juntos hace 40 años y disfrutamos mucho de la naturaleza. Cuando nuestros hijos emprendieron sus respectivos caminos, nuestra casa quedó grande, y fue ahí cuando se nos ocurrió dar cobijo a animales en situación de calle. Ya llevamos 7 años en este plan. Pero solos no podemos costear todo lo que conlleva tener muchos animales a cargo. Es por eso que contamos con ustedes y estamos felices de recibirlos en esto que llamamos "Tu Mascota".</p>
+      <p class="descripcion_nosotros">Somos Ana y Carlos, estamos juntos hace 40 años y disfrutamos mucho de la
+        naturaleza. Cuando nuestros hijos emprendieron sus respectivos caminos, nuestra casa quedó grande, y fue ahí
+        cuando se nos ocurrió dar cobijo a animales en situación de calle. Ya llevamos 7 años en este plan. Pero solos
+        no podemos costear todo lo que conlleva tener muchos animales a cargo. Es por eso que contamos con ustedes y
+        estamos felices de recibirlos en esto que llamamos "Tu Mascota".</p>
 
     </section>
 
@@ -238,6 +245,8 @@
           alt="..."></a>
       <a href="https://www.veguis.com/" target="_blank"><img src="/Assets/alimento4-removebg-preview.png" alt="..."></a>
 
+
+
     </section>
 
 
@@ -252,13 +261,57 @@
       </ul>
     </section>
 
-    <section class="footer">
+
     </section>
   </main>
+  <section class="footer">
+    <div class="container">
+      <footer class="py-5">
+        <div class="row">
 
-  <footer>
-    <span>Copyright&#169; by Majo & Angie para NEORIS Noviembre 2023.</span>
-  </footer>
+          <div class="col-3">
+            <h4>Compañía</h4>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="">Negocio</a></li>
+              <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="">Franquicias</a></li>
+              <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="">Colaboradores</a></li>
+              <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="">Red</a></li>
+            </ul>
+
+          </div>
+          <div class="col-3">
+            <h4>Contactos</h4>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="">Contactarse con
+                  nosotros</a>
+              </li>
+              <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="">Politica de privacidad</a>
+              </li>
+              <li class="nav-item mb-2"><a class="nav-link p-0 text-muted" href="">Terminos y Condiciones</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-4 offset-1">
+            <form>
+              <h5>Suscribite a nuestro Newsletter</h5>
+              <p>Recibe un resumen mensual de nuestras novedades.</p>
+              <div class="d-flex w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email</label>
+                <input id="newsletter1" type="text" class="form-control" placeholder="Email">
+                <button class="btn btn-primary" type="button">Suscribirse</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between py-4 my-4 border-top">
+          <p>&#169 2023 UTN. Majo y Angie.</p>
+
+        </div>
+      </footer>
+
+    </div>
+  </section>
+ 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>

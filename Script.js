@@ -1,58 +1,46 @@
-//Codigo hecho cuando habia un solo modal.
 
-//abrir el modal
-/*function abrirModal() {
-  let modal = document.getElementById("modal");
-  modal.style.display = "block";
-}
 
-//cerrar el modal
-function cerrarModal() {
-  let modal = document.getElementById("modal");
-  modal.style.display = "none";
-}
-
-//evento clic para abrir el modal
-let enlace = document.getElementById("colaborar_form");
-enlace.addEventListener("click", function (event) {
-  event.preventDefault();
-  abrirModal();
-});*/
-
-// Abrir el primer modal
+// Abrir modal_1
 function abrirModal_1() {
   let modal = document.getElementById("modal_1");
   modal.style.display = "block";
+    document.getElementById("fondo_modal").style.display = "block";
+  
 }
 
-// Cerrar el primer modal
+// Cerrar modal_1
 function cerrarModal_1() {
   let modal = document.getElementById("modal_1");
   modal.style.display = "none";
+   document.getElementById("fondo_modal").style.display = "none";
 }
 
-// Abrir el segundo modal
+// Abrir modal_2
 function abrirModal_2() {
   let modal = document.getElementById("modal_2");
   modal.style.display = "block";
+  document.getElementById("fondo_modal").style.display = "block";
 }
 
-// Cerrar el segundo modal
+// Cerrar modal_2
 function cerrarModal_2() {
   let modal = document.getElementById("modal_2");
   modal.style.display = "none";
+    document.getElementById("fondo_modal").style.display = "none";
 }
 
-// Abrir el tercer modal
+// Abrir modal_3
 function abrirModal_3() {
   let modal = document.getElementById("modal_3");
   modal.style.display = "block";
+  document.getElementById("fondo_modal").style.display = "block";
 }
 
-// Cerrar el tercer modal
+// Cerrar modal_3
 function cerrarModal_3() {
   let modal = document.getElementById("modal_3");
   modal.style.display = "none";
+    document.getElementById("fondo_modal").style.display = "none";
 }
 
 // Eventos para abrir los nuevos modales
@@ -60,6 +48,7 @@ let enlace1 = document.getElementById("colaborar_form");
 enlace1.addEventListener("click", function (event) {
   event.preventDefault();
   abrirModal_1();
+
 });
 
 let enlace2 = document.getElementById("adoptar_form");
